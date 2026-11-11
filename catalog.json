@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "packs": [
+    {
+      "schemaVersion": 1,
+      "currency": "IQD",
+      "version": 5,
+      "inputSize": 224,
+      "sha256": "8ea150fbc18cbf5784a13a7254f883c2beeb1bcd1662a22585bd4d032443e215",
+      "labels": [
+        0,
+        250,
+        500,
+        1000,
+        5000,
+        10000,
+        25000,
+        50000
+      ],
+      "inputType": "float32",
+      "preprocessing": "rgb_0_255",
+      "mode": "single",
+      "validated": true,
+      "modelAsset": "assets/currency_packs/iqd_float16.tflite",
+      "presenceModelAsset": "assets/currency_packs/presence_float16.tflite",
+      "presenceSha256": "a8c330e126af502c36f3a01a7f7032ec1813bc92e52d73e582de84df5b48283b",
+      "verificationModelAsset": "assets/currency_packs/iqd_verifier_float16.tflite",
+      "verificationSha256": "cd54021423e25131a4c72a65e4ff2f25acc6efd2330fb1ac247518aad24efc8f",
+      "classifierInput": "detected_crop_v1",
+      "detector": {
+        "contract": "center_grid_v1",
+        "inputSize": 224,
+        "grid": 14,
+        "modelAsset": "assets/currency_packs/iqd_detector_float16.tflite",
+        "sha256": "f1ad9be384f90fe590923c48c3037baa575cb453f7073e7fb1d451ec7a4e58b8",
+        "threshold": 0.4
+      },
+      "supplementalPresenceModelAsset": "assets/currency_packs/iqd_design_presence_float16.tflite",
+      "supplementalPresenceSha256": "9cb8426264c5fb3f67d69eb8916e37047eab9939075a91d4bae51c2c8e33db65",
+      "currencyGate": {
+        "modelAsset": "assets/currency_packs/iqd_currency_gate_float16.tflite",
+        "sha256": "cb3334d21fe88518de48d0a6c6cc4e4d46ea78026522c3308f3fbaa4249f8145",
+        "rule": "require",
+        "threshold": 0.5
+      },
+      "acceptance": {
+        "minimumPresence": 0.9,
+        "minimumScore": 0.99,
+        "requiredVotes": 3,
+        "fallbackRegions": true,
+        "fallbackRequiresDetection": true,
+        "maximumFrameClipped": 0.5,
+        "maximumCropClipped": 0.3
+      },
+      "display": {
+        "nameAr": "الدينار العراقي",
+        "nameEn": "Iraqi dinar",
+        "unitAr": "دينار",
+        "unitEn": "IQD",
+        "spokenUnitEn": "dinars"
+      },
+      "files": [
+        {
+          "name": "iqd_float16.tflite",
+          "path": "packs/iqd/5/iqd_float16.tflite",
+          "sha256": "8ea150fbc18cbf5784a13a7254f883c2beeb1bcd1662a22585bd4d032443e215",
+          "bytes": 1966996
+        },
+        {
+          "name": "presence_float16.tflite",
+          "path": "packs/shared/1/presence_float16.tflite",
+          "sha256": "a8c330e126af502c36f3a01a7f7032ec1813bc92e52d73e582de84df5b48283b",
+          "bytes": 1944840
+        },
+        {
+          "name": "iqd_verifier_float16.tflite",
+          "path": "packs/iqd/5/iqd_verifier_float16.tflite",
+          "sha256": "cd54021423e25131a4c72a65e4ff2f25acc6efd2330fb1ac247518aad24efc8f",
+          "bytes": 1966996
+        },
+        {
+          "name": "iqd_design_presence_float16.tflite",
+          "path": "packs/iqd/5/iqd_design_presence_float16.tflite",
+          "sha256": "9cb8426264c5fb3f67d69eb8916e37047eab9939075a91d4bae51c2c8e33db65",
+          "bytes": 1944768
+        },
+        {
+          "name": "iqd_detector_float16.tflite",
+          "path": "packs/iqd/5/iqd_detector_float16.tflite",
+          "sha256": "f1ad9be384f90fe590923c48c3037baa575cb453f7073e7fb1d451ec7a4e58b8",
+          "bytes": 2141640
+        },
+        {
+          "name": "iqd_currency_gate_float16.tflite",
+          "path": "packs/iqd/5/iqd_currency_gate_float16.tflite",
+          "sha256": "cb3334d21fe88518de48d0a6c6cc4e4d46ea78026522c3308f3fbaa4249f8145",
+          "bytes": 1944840
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "currency": "USD",
+      "version": 4,
+      "inputSize": 224,
+      "sha256": "9cf9cba2da92a1582277930896f5ff551f53476e632aedf53f2614d1734fe53e",
+      "labels": [
+        0,
+        1,
+        2,
+        5,
+        10,
+        20,
+        50,
+        100
+      ],
+      "inputType": "float32",
+      "preprocessing": "rgb_0_255",
+      "mode": "single",
+      "validated": true,
+      "modelAsset": "assets/currency_packs/usd_reader_float16.tflite",
+      "presenceModelAsset": "assets/currency_packs/presence_float16.tflite",
+      "presenceSha256": "a8c330e126af502c36f3a01a7f7032ec1813bc92e52d73e582de84df5b48283b",
+      "verificationModelAsset": "assets/currency_packs/usd_verifier_float16.tflite",
+      "verificationSha256": "f662ad3a82abd6fd8a8ff2809bec3cd3b49783b52ec39dd046ca9f94b0b4f521",
+      "classifierInput": "detected_crop_v1",
+      "detector": {
+        "contract": "center_grid_v1",
+        "inputSize": 224,
+        "grid": 14,
+        "modelAsset": "assets/currency_packs/usd_detector_float16.tflite",
+        "sha256": "67b0c0e94ee9633be12963df4a16d27d74607fd1228926ac8bcb79126cf87110",
+        "threshold": 0.4
+      },
+      "currencyGate": {
+        "modelAsset": "assets/currency_packs/iqd_currency_gate_float16.tflite",
+        "sha256": "cb3334d21fe88518de48d0a6c6cc4e4d46ea78026522c3308f3fbaa4249f8145",
+        "rule": "reject",
+        "threshold": 0.5
+      },
+      "acceptance": {
+        "minimumPresence": 0.9,
+        "minimumScore": 0.99,
+        "requiredVotes": 5,
+        "fallbackRegions": false,
+        "fallbackRequiresDetection": true,
+        "maximumFrameClipped": 0.5,
+        "maximumCropClipped": 0.3
+      },
+      "display": {
+        "nameAr": "الدولار الأمريكي",
+        "nameEn": "US dollar",
+        "unitAr": "دولار",
+        "unitEn": "USD",
+        "spokenUnitEn": "dollars"
+      },
+      "files": [
+        {
+          "name": "usd_reader_float16.tflite",
+          "path": "packs/usd/4/usd_reader_float16.tflite",
+          "sha256": "9cf9cba2da92a1582277930896f5ff551f53476e632aedf53f2614d1734fe53e",
+          "bytes": 1951688
+        },
+        {
+          "name": "presence_float16.tflite",
+          "path": "packs/shared/1/presence_float16.tflite",
+          "sha256": "a8c330e126af502c36f3a01a7f7032ec1813bc92e52d73e582de84df5b48283b",
+          "bytes": 1944840
+        },
+        {
+          "name": "usd_verifier_float16.tflite",
+          "path": "packs/usd/4/usd_verifier_float16.tflite",
+          "sha256": "f662ad3a82abd6fd8a8ff2809bec3cd3b49783b52ec39dd046ca9f94b0b4f521",
+          "bytes": 1951688
+        },
+        {
+          "name": "usd_detector_float16.tflite",
+          "path": "packs/usd/4/usd_detector_float16.tflite",
+          "sha256": "67b0c0e94ee9633be12963df4a16d27d74607fd1228926ac8bcb79126cf87110",
+          "bytes": 2141640
+        },
+        {
+          "name": "iqd_currency_gate_float16.tflite",
+          "path": "packs/iqd/5/iqd_currency_gate_float16.tflite",
+          "sha256": "cb3334d21fe88518de48d0a6c6cc4e4d46ea78026522c3308f3fbaa4249f8145",
+          "bytes": 1944840
+        }
+      ]
+    }
+  ]
+}
